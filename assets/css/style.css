@@ -1,0 +1,102 @@
+:root {
+    --purple:rgb(170, 51, 170);
+
+}
+
+* {
+    box-sizing: border-box;
+    background-color: rgb(56, 55, 55);
+  }
+
+  body {
+    font-family: Arial;
+    margin: 0 auto;
+  }
+
+  header, footer {
+    color: var(--purple);
+    text-align: center;
+  }
+
+  header>div {
+    color: white;
+    margin-bottom: 3%;
+  }
+
+  pre {
+    overflow: auto;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    flex: 1 0 30%;
+    padding: 10px;
+    border-style: dotted;
+    border-color:white;
+    /* max-width: 30%; */ /*needed this for three cards to show on my screen but brakes the flex for smaller screen*/
+    margin: 10px 20px 40px 20px;
+    /*width: 250px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;*/
+  }
+  
+  .card header {
+    margin-top: -40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--purple);
+    display: flex;
+    justify-content: center;
+    border-style: double;
+    border-radius: 10px;
+    border-color: white;
+
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .card:hover, .card:hover header  {
+    box-shadow: inset 0px 0px 8px
+        rgba(232, 102, 236, 1), 0 0 15px
+        rgba(232, 102, 236, 1);
+    }
+  
+  .outterbox {
+    /*width: 100%;*/
+    color: var(--purple);
+  }
+
+  .innerbox pre{
+    color: white;
+    /*background-color: rgb(206, 134, 206);*/
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100% );
+    border-radius: 10px;
+    margin: 10px 10px;
+    -webkit-user-select: all;
+    user-select: all;
+    /* overflow: auto;
+    white-space: pre-wrap;
+    display:flex;
+    align-items: center;
+    min-height: 100%; */
+    padding: 10px;
+  }
+  
+  @media screen and (max-width:992px) {
+    .card {
+        flex: 1 0 50%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .card {
+        flex: 1 0 100%;
+    }
+  }
